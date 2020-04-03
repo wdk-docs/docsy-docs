@@ -1,18 +1,16 @@
 ---
-title: "文件版本"
+title: "文档版本"
 date: 2020-02-02
 weight: 4
 description: >
   自定义导航和您的文档的多个版本的横幅。
 ---
 
-Depending on your project's releases and versioning, you may want to let your
-users access previous versions of your documentation. How you deploy the
-previous versions is up to you. This page describes the Docsy features that you
-can use to provide navigation between the various versions of your docs and
-to display an information banner on the archived sites.
+根据项目的发布和版本，您可能希望让用户访问您的文件的以前版本。
+你如何部署以前的版本是由你。
+本页介绍 Docsy 功能，您可以使用您的文档的不同版本之间提供导航，并显示在存档网站的信息旗帜。
 
-## Adding a version drop-down menu
+## 添加一个版本下拉菜单
 
 If you add some `[params.versions]` in `config.toml`, the Docsy theme adds a
 version selector drop down to the top-level menu. You specify a URL and a name
@@ -45,7 +43,7 @@ version_menu = "Releases"
 You can read more about Docsy menus in the guide to
 [navigation and search](/docs/adding-content/navigation/).
 
-## Displaying a banner on archived doc sites
+## 展示一个横幅上进行归档的文档网站
 
 If you create archived snapshots for older versions of your docs, you can add a
 note at the top of every page in the archived docs to let readers know that

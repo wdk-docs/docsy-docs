@@ -27,7 +27,7 @@ color
 
 ### blocks/cover
 
-The **blocks/cover** shortcode creates a landing page type of block that fills the top of the page.
+**blocks/cover** 短代码创建填充页面的顶部块的着陆页类型。
 
 ```html
 {{</* blocks/cover title="Welcome!" image_anchor="center" height="full" color="primary" */>}}
@@ -46,32 +46,36 @@ The **blocks/cover** shortcode creates a landing page type of block that fills t
 {{</* /blocks/cover */>}}
 ```
 
-Note that the relevant shortcode parameters above will have sensible defaults, but is included here for completeness.
+需要注意的是相关的简码参数上面会有合理的默认值，但此处是出于完整性包括在内。
 
 {{% alert title="Hugo Tip" %}}
 
-> Using the bracket styled shortcode delimiter, `>}}`, tells Hugo that the inner content is HTML/plain text and needs no further processing. Changing the delimiter to `%}}` means Hugo will treat the content as Markdown. You can use both styles in your pages.
-> {{% /alert %}}
+> 使用支架风格的简码的分隔符, `>}}`, 告诉`Hugo`内部的内容是 HTML/纯文本并且不需要进一步的处理.
+> 更改分隔符`％}}` 意味着 `Hugo`将把内容作为'Markdown`.
+> 您可以在页面中使用这两种风格。
 
-| Parameter    | Default                        | Description                           |
-| ------------ | ------------------------------ | ------------------------------------- |
-| title        |                                | The main display title for the block. |
-| image_anchor |                                |
-| height       |                                | See above.                            |
-| color        |                                | See above.                            |
-| byline       | Byline text on featured image. |
+{{% /alert %}}
 
-To set the background image, place an image with the word "background" in the name in the page's [Page Bundle](/docs/adding-content/content/#page-bundles). For example, in our the example site the background image in the home page's cover block is [`featured-background.jpg`](https://github.com/google/docsy-example/tree/master/content/en), in the same directory.
+| 参数         | 默认                 | 描述                 |
+| ------------ | -------------------- | -------------------- |
+| title        |                      | 主显示标题用于该块。 |
+| image_anchor |                      |                      |
+| height       |                      | 看上面。             |
+| color        |                      | 看上面。             |
+| byline       | 特色图片上署名文字。 |                      |
+
+要设置背景图片, place an image with the word "background" in the name in the page's [Page Bundle](/docs/adding-content/content/#page-bundles).
+For example, in our the example site the background image in the home page's cover block is [`featured-background.jpg`](https://github.com/google/docsy-example/tree/master/content/en), in the same directory.
 
 {{% alert title="Tip" %}}
 If you also include the word **featured** in the image name, e.g. `my-featured-background.jpg`, it will also be used as the Twitter Card image when shared.
 {{% /alert %}}
 
-For available icons, see [Font Awesome](https://fontawesome.com/icons?d=gallery&m=free).
+有关可用图标, 查看 [Font Awesome](https://fontawesome.com/icons?d=gallery&m=free).
 
 ### blocks/lead
 
-The **blocks/lead** block shortcode is a simple lead/title block with centred text and an arrow down pointing to the next section.
+**blocks/lead** 块短码是与居中的文本和向下指向下一个部分的箭头一个简单的铅/标题块。
 
 ```go-html-template
 {{%/* blocks/lead color="dark" */%}}
@@ -88,9 +92,11 @@ Runs on **bare metal** in the **cloud**!
 
 ### blocks/section
 
-The **blocks/section** shortcode is meant as a general-purpose content container. It comes in two "flavors", one for general content and one with styling more suitable for wrapping a horizontal row of feature sections.
+**blocks/section** 短码是指作为一个通用的内容容器。
 
-The example below shows a section wrapping 3 feature sections.
+它有两个“`flavors`”, 一个普通的内容 和 一个与样式更适合于包装的特征部分的水平行.
+
+下面示出了部分包裹 3 个特征部分的实施例。
 
 ```go-html-template
 {{</* blocks/section color="dark" */>}}
@@ -107,11 +113,11 @@ For announcement of latest features etc.
 {{</* /blocks/section */>}}
 ```
 
-| Parameter | Default | Description                                                                                                                              |
-| --------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| height    |         | See above.                                                                                                                               |
-| color     |         | See above.                                                                                                                               |
-| type      |         | Specify "section" if you want a general container, omit this parameter if you want this section to contain a horizontal row of features. |
+| 参数   | 默认 | 描述                                                                                   |
+| ------ | ---- | -------------------------------------------------------------------------------------- |
+| height |      | See above.                                                                             |
+| color  |      | See above.                                                                             |
+| type   |      | 指定“`section`”如果你想有一个一般的容器, 省略该参数，如果你想这个部分包含的功能水平行. |
 
 ### blocks/feature
 
@@ -131,7 +137,8 @@ We do a [Pull Request](https://github.com/gohugoio/hugo/pulls) contributions wor
 
 ### blocks/link-down
 
-The **blocks/link-down** shortcode creates a navigation link down to the next section. It's meant to be used in combination with the other blocks shortcodes.
+**blocks/link-down** 简码创建的导航链接到下一个章节.
+它意味着在组合使用与其它块简码。
 
 ```go-html-template
 
@@ -148,7 +155,7 @@ The **blocks/link-down** shortcode creates a navigation link down to the next se
 
 ### alert
 
-The **alert** shortcode creates an alert block that can be used to display notices or warnings.
+**alert** 短码产生了可以用来显示通知或警告警报块.
 
 ```go-html-template
 {{%/* alert title="Warning" color="warning" */%}}
@@ -157,7 +164,7 @@ This is a warning.
 
 ```
 
-Renders to:
+要呈现:
 
 {{% alert title="Warning" color="warning" %}}
 This is a warning.
@@ -169,7 +176,7 @@ This is a warning.
 
 ### pageinfo
 
-The **pageinfo** shortcode creates a text box that you can use to add banner information for a page: for example, letting users know that the page contains placeholder content, that the content is deprecated, or that it documents a beta feature.
+**pageinfo** 简码创建一个文本框，您可以使用添加旗帜信息页面: 例如，让用户知道该页面包含占位符的内容，该内容已过时，或者说，它记录了一个测试版功能.
 
 ```go-html-template
 {{%/* pageinfo color="primary" */%}}
@@ -178,7 +185,7 @@ This is placeholder content.
 
 ```
 
-Renders to:
+要呈现:
 
 {{% pageinfo color="primary" %}}
 This is placeholder content
@@ -190,7 +197,7 @@ This is placeholder content
 
 ### imgproc
 
-The **imgproc** shortcode finds an image in the current [Page Bundle](/docs/adding-content/content/#page-bundles) and scales it given a set of processing instructions.
+**imgproc** 短码找到在当前[Page Bundle](/docs/adding-content/content/#page-bundles)和体重秤它给定一组处理指令的图像。
 
 ```go-html-template
 {{</* imgproc spruce Fill "400x450" */>}}
@@ -202,7 +209,10 @@ Norway Spruce Picea abies shoot with foliage buds.
 Norway Spruce Picea abies shoot with foliage buds.
 {{< /imgproc >}}
 
-The example above has also a byline with photo attribution added. When using illustrations with a free license from [WikiMedia](https://commons.wikimedia.org/) and simlilar, you will in most situations need a way to attribute the author or licensor. You can add metadata to your page resources in the page front matter. The `byline` param is used by convention in this theme:
+上面的例子有还具有添加照片归因署名。
+当使用插图从[维基](https://commons.wikimedia.org/)免费许可和类似, 你会在大多数情况下，需要一种方法来属性作者或许可。
+您可以在页面前面的问题元数据添加到您的网页资源。
+该`byline`参数是在这个主题中使用的约定:
 
 ```yaml
 resources:
@@ -211,15 +221,17 @@ resources:
       byline: "Photo: Bjørn Erik Pedersen / CC-BY-SA"
 ```
 
-| Parameter | Description                                                                                                                                                 |
-| --------: | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|         1 | The image filename or enough of it to identify it (we do Glob matching)                                                                                     |
-|         2 | Command. One of `Fit`, `Resize` or `Fill`. See [Image Processing Methods](https://gohugo.io/content-management/image-processing/#image-processing-methods). |
-|         3 | Processing options, e.g. `400x450`. See [Image Processing Options](https://gohugo.io/content-management/image-processing/#image-processing-methods).        |
+| 参数 | 描述                                                                                                                                        |
+| ---: | ------------------------------------------------------------------------------------------------------------------------------------------- |
+|    1 | 图像文件名或足够的它，以确定它（我们做的水珠匹配）                                                                                          |
+|    2 | 命令. 之一 `Fit`, `Resize` 要么 `Fill`. 看 [图像处理方法](https://gohugo.io/content-management/image-processing/#image-processing-methods). |
+|    3 | 处理选项, 如 `400x450`. 看 [影像处理选项](https://gohugo.io/content-management/image-processing/#image-processing-methods).                 |
 
 ### swaggerui
 
-The `swaggerui` shortcode can be placed anywhere inside a page with the [`swagger` layout](https://github.com/google/docsy/tree/master/layouts/swagger); it renders [Swagger UI](https://swagger.io/tools/swagger-ui/) using any OpenAPI YAML or JSON file as source. This can be hosted anywhere you like, for example in your site's root [`/static` folder](/docs/adding-content/content/#adding-static-content).
+`swaggerui` 短代码可以放在[`swagger`](https://github.com/google/docsy/tree/master/layouts/swagger)布局的页面内任何地方 ;
+它呈现使用任何的 OpenAPI YAML 或 JSON 文件作为源[Swagger UI](https://swagger.io/tools/swagger-ui/)。
+这可以在任何地方托管你喜欢, 例如，在网站根目录 [`/static` 文件夹](/docs/adding-content/content/#adding-static-content).
 
 ```yaml
 ---
@@ -231,4 +243,4 @@ description: Reference for the Pet Store API
 { { </* swaggerui src="/openapi/petstore.yaml" */> } }
 ```
 
-You can customize Swagger UI's look and feel by overriding Swagger's CSS or by editing and compiling a [Swagger UI dist](https://github.com/swagger-api/swagger-ui) yourself and replace `themes/docsy/static/css/swagger-ui.css`.
+您可以自定义 Swagger UI 外观 and feel by overriding Swagger's CSS or by editing and compiling a [Swagger UI dist](https://github.com/swagger-api/swagger-ui) yourself and replace `themes/docsy/static/css/swagger-ui.css`.

@@ -6,7 +6,8 @@ description: >
   帮助用户与你的源存储库交互。
 ---
 
-The Docsy [docs and blog layouts](/docs/adding-content/content/#adding-docs-and-blog-posts) include links for readers to edit the page or create issues for your docs or project via your site's source repository. The current generated links for each docs or blog page are:
+该 Docsy [文档和博客的布局](/docs/adding-content/content/#adding-docs-and-blog-posts)包括为读者编辑的页面链接或者创建您的文档，或通过您的网站的源代码库项目的问题。
+每个文档或博客页面的电流产生的链接:
 
 - **Edit this page**: Brings the user to an editable version of the page content in their fork (if available) of your docs repo. If the user doesn't have a current fork of your docs repo, they are invited to create one before making their edit. The user can then create a pull request for your docs.
 - **Create documentation issue**: Brings the user to a new issue form in your docs repo with the name of the current page as the issue's title.
@@ -16,7 +17,7 @@ This page shows you how to configure these links using your `config.toml` file.
 
 Currently Docsy supports only GitHub repository links "out of the box". If you are using another repository such as Bitbucket and would like generated repository links, feel free to [add a feature request or update our theme](/docs/contribution-guidelines/).
 
-## Link configuration
+## 链接配置
 
 There are three variables you can configure in `config.toml` to set up links:
 
@@ -28,7 +29,7 @@ The URL for your site's source repository. This is used to generate the **Edit t
 github_repo = "https://github.com/google/docsy"
 ```
 
-### `github_subdir` (optional)
+### `github_subdir` (可选的)
 
 Specify a value here if your content directory is not in your repo's root directory. For example, this site is in the `userguide` subdirectory of its repo. Setting this value means that your edit links will go to the right page.
 
@@ -36,7 +37,7 @@ Specify a value here if your content directory is not in your repo's root direct
 github_subdir = "userguide"
 ```
 
-### `github_project_repo` (optional)
+### `github_project_repo` (可选的)
 
 Specify a value here if you have a separate project repo and you'd like your users to be able to create issues against your project from the relevant docs. The **Create project issue** link appears only if this is set.
 
@@ -44,7 +45,7 @@ Specify a value here if you have a separate project repo and you'd like your use
 github_project_repo = "https://github.com/google/docsy"
 ```
 
-### `github_branch` (optional)
+### `github_branch` (可选的)
 
 Specify a value here if you have would like to reference a different branch for the other github settings like **Edit this page** or **Create project isssue**.
 
